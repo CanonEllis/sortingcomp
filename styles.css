@@ -1,0 +1,86 @@
+/* General body styling */
+body {
+    font-family: 'VT323', monospace; /* Updated to use VT323 for a classic 8-bit font */
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Leaderboard container */
+.leaderboard-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px; /* Adjusted font size for VT323 */
+    margin-bottom: 20px;
+}
+
+/* Leaderboard table styling */
+.leaderboard {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.leaderboard th, .leaderboard td {
+    padding: 10px 20px;
+    font-size: 24px; /* Slightly larger to suit VT323 font */
+}
+
+.leaderboard th {
+    color: yellow;
+    border-bottom: 2px solid white;
+}
+
+.leaderboard td {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.leaderboard .highlight td {
+    color: yellow;
+}
+
+/* Adding hover animation to float the whole row */
+.leaderboard tr {
+    transition: transform 0.3s ease-in-out;
+}
+
+.leaderboard tr:hover {
+    animation: float 0.6s infinite alternate ease-in-out;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Adding 3D text effect for names */
+.leaderboard td:nth-child(2) {
+    text-shadow: 2px 2px 0 #333, 4px 4px 0 #111;
+}
+
+/* Hover effect for the names */
+.leaderboard td:nth-child(2):hover {
+    text-shadow: 4px 4px 0 #333, 6px 6px 0 #111;
+}
+
+/* Countdown timer styling */
+#countdown {
+    font-size: 32px;
+    color: yellow;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 #333, 4px 4px 0 #111;
+}
